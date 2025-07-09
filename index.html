@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vampire Survivor - Roguelike Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="ui">
+            <div id="healthBar">
+                <div id="healthFill"></div>
+                <span id="healthText">100/100</span>
+            </div>
+            <div id="experienceBar">
+                <div id="experienceFill"></div>
+                <span id="experienceText">Level 1</span>
+            </div>
+            <div id="gameStats">
+                <div id="timer">Time: 0:00</div>
+                <div id="enemiesKilled">Enemies: 0</div>
+            </div>
+        </div>
+        <div id="gameOverScreen" class="hidden">
+            <div id="gameOverContent">
+                <h2>Game Over</h2>
+                <div id="finalStats">
+                    <p>Survived: <span id="finalTime">0:00</span></p>
+                    <p>Enemies Killed: <span id="finalEnemies">0</span></p>
+                    <p>Level Reached: <span id="finalLevel">1</span></p>
+                </div>
+                <button id="restartButton">Play Again</button>
+            </div>
+        </div>
+        <div id="levelUpScreen" class="hidden">
+            <div id="levelUpContent">
+                <h2>Level Up!</h2>
+                <p>Choose an upgrade:</p>
+                <div id="upgradeOptions"></div>
+            </div>
+        </div>
+        <div id="pauseScreen" class="hidden">
+            <div id="pauseContent">
+                <h2>Game Paused</h2>
+                <p>Press SPACE to resume</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="utils.js"></script>
+    <script src="weapon.js"></script>
+    <script src="enemy.js"></script>
+    <script src="player.js"></script>
+    <script src="ui.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

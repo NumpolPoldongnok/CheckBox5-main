@@ -13,3 +13,10 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Web game temporary files
+/tmp
+*.tmp
+*.log
+node_modules/
+dist/
